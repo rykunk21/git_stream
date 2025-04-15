@@ -1,0 +1,12 @@
+[package]
+name = "git_stream"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+anyhow = "1.0.98"
+chrono = "0.4.40"
+clap = { version = "4.5.36", features = ["derive"] }
+git2 = "0.20.1"
+polars = { version = "0.46.0", features = ["polars-io"] }
+polars-io = { version = "0.46.0", features = ["parquet", "json"] }
