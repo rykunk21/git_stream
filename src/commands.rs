@@ -25,15 +25,19 @@ pub fn export_repository(path: &PathBuf, format: &str) -> Result<(), Box<dyn Err
     match format.to_lowercase().as_str() {
         "csv" => {
             let mut file = std::fs::File::create(path.join("git_history.csv"))?;
-            CsvWriter::new(&mut file).finish(&df)?;
+            // CsvWriter::new(&mut file).finish(&df)?;
+            todo!();
         }
         "parquet" => {
             let file = std::fs::File::create(path.join("git_history.parquet"))?;
-            ParquetWriter::new(file).finish(&df)?;
+            // ParquetWriter::new(file).finish(&df)?;
+            todo!();
         }
         "json" => {
             let mut file = std::fs::File::create(path.join("git_history.json"))?;
-            JsonWriter::new(&mut file).finish(&df)?;
+            // JsonWriter::new(&mut file).finish(&df)?;
+
+            todo!();
         }
         _ => return Err("Unsupported format. Use 'csv', 'parquet', or 'json'".into()),
     }
