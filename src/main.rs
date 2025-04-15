@@ -34,8 +34,7 @@ enum Commands {
     Query {
         #[arg(default_value = ".")]
         path: PathBuf,
-        #[arg(long)]
-        since: Option<String>,
+        #[arg(long)] since: Option<String>,
         #[arg(long)]
         author: Option<String>,
     },

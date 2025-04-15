@@ -39,7 +39,7 @@ pub fn export_repository(path: &PathBuf, format: &str) -> Result<(), Box<dyn Err
 
             todo!();
         }
-        _ => return Err("Unsupported format. Use 'csv', 'parquet', or 'json'".into()),
+        _ => return Err("TODO!() -> Unsupported format. Use 'csv', 'parquet', or 'json'".into()),
     }
 
     Ok(())
