@@ -28,7 +28,7 @@ impl GitHistory {
         // Collect basic commit information
         for oid in revwalk {
             let commit = self.repo.find_commit(oid?)?;
-            
+
             // Skip if doesn't match author filter
             if let Some(author_filter) = author {
                 if !commit.author().name().unwrap_or("").contains(author_filter) {
@@ -66,4 +66,3 @@ mod tests {
         assert!(df.shape().0 > 0); // Should have at least one commit
     }
 }
-
