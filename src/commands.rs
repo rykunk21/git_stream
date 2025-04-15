@@ -24,7 +24,7 @@ pub fn export_repository(path: &PathBuf, format: &str) -> Result<(), Box<dyn Err
 
     match format.to_lowercase().as_str() {
         "csv" => {
-            let mut file = std::fs::File::create(path.join("git_history.csv"))?;
+            let file = std::fs::File::create(path.join("git_history.csv"))?;
             // CsvWriter::new(&mut file).finish(&df)?;
             todo!();
         }
@@ -34,7 +34,7 @@ pub fn export_repository(path: &PathBuf, format: &str) -> Result<(), Box<dyn Err
             todo!();
         }
         "json" => {
-            let mut file = std::fs::File::create(path.join("git_history.json"))?;
+            let file = std::fs::File::create(path.join("git_history.json"))?;
             // JsonWriter::new(&mut file).finish(&df)?;
 
             todo!();

@@ -1,5 +1,5 @@
 use anyhow::Result;
-use git2::{Repository, Time};
+use git2::Repository;
 use polars::prelude::*;
 use std::path::Path;
 
